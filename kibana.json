@@ -1,0 +1,54 @@
+{
+  "_id": "k8s-verb-dashboard",
+  "_type": "dashboard",
+  "_source": {
+    "description": "This dashboard analyzes Kubernetes API Server verb usage by multiple dimensions.",
+    "title": "Kubernetes API Server Verb Analysis",
+    "panelsJSON": [
+      {
+        "embeddableConfig": {},
+        "gridData": {
+          "x": 0,
+          "y": 0,
+          "w": 6,
+          "h": 6,
+          "i": "0"
+        },
+        "panelIndex": "0",
+        "id": "f8c47c70-1b29-11ec-a372-05b3682c2773",
+        "panelRefName": "panel_0",
+        "version": "7.15.0",
+        "type": "visualization",
+        "attributes": {
+          "title": "Verb Distribution",
+          "type": "pie",
+          "visState": "{\"title\":\"Verb Distribution\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":true,\"truncate\":100},\"dimension\":{\"accessor\":\"kubernetes.verb.keyword\",\"format\":{\"id\":\"string\"},\"params\":{\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\"}},\"metric\":{\"accessor\":\"Records\",\"format\":{\"id\":\"number\",\"params\":{\"pattern\":\"0,0\"}}},\"buckets\":{\"schema\":\"segment\",\"group\":\"metrics\",\"min\":1,\"max\":1,\"aggConfigs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"kubernetes.verb.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}}}",
+          "uiStateJSON": "{}",
+          "description": "A pie chart showing the distribution of Kubernetes API Server verbs.",
+          "version": 1,
+          "timeRange": {
+            "to": "now",
+            "from": "now-1h"
+          },
+          "savedSearchId": "7c49f4f0-0c4b-11ec-87be-ffda444b8197",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "embeddableConfig": {},
+        "gridData": {
+          "x": 6,
+          "y": 0,
+          "w": 6,
+          "h": 6,
+          "i": "1"
+        },
+        "panelIndex": "1",
+        "id": "0f3d3b20-1b2a-11ec-a372-05b3682c2773",
+        "panelRefName": "panel_1",
+        "version": "7.15.0",
+        "type": "visualization",
+        "attributes": {
+          "title": "Verb by Namespace",
+          "type": "pie",
+          "visState": "{\"title\":\"Verb by Namespace\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":true
